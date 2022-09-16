@@ -1,0 +1,316 @@
+@charset "UTF-8";
+@import "reset.css";
+/* @import "_reset.css";  css pre-processor(전처리기 믹스인) */
+					  /* .less → 컴파일 → source.map → *.css */
+:root{
+	--body-color: #222;
+	--hover-color: #000000;
+	--footer-color: #888888;
+
+	--primary-color: #f9c02d;
+	--secondary-color: #000;
+	--third-color: #666;
+	--fourth-color: #45648B;
+	--text-color: #fff;
+}
+html{
+	font-size: 20px;
+	scroll-behavior: smooth;
+}
+body{
+	font-family: 'Noto Sans KR', sans-serif;
+	color: var(--body-color, red);
+	line-height: 1.5;
+	letter-spacing: -1px;
+}
+.d-none{
+	display: none;
+}
+/* ========== google font icon style =============== */
+.material-symbols-outlined {
+  font-variation-settings:
+  'FILL' 0,
+  'wght' 400,
+  'GRAD' 0,
+  'opsz' 48
+}
+.material-symbols-outlined {
+  font-variation-settings:
+  'FILL' 0,
+  'wght' 400,
+  'GRAD' 0,
+  'opsz' 48
+}
+.material-symbols-outlined {
+  font-variation-settings:
+  'FILL' 0,
+  'wght' 400,
+  'GRAD' 0,
+  'opsz' 48
+}
+.material-symbols-outlined{
+	vertical-align: middle; /*table inline 요소에 사용*/
+}
+.post-author .material-symbols-outlined{
+	vertical-align: middle;
+	background: var(--primary-color);
+	padding: .5rem;
+	border-radius: 1rem;
+	
+}
+.post-date .material-symbols-outlined{
+	vertical-align: middle;
+	background: var(--primary-color);
+	padding: .5rem;
+	border-radius: 1rem;
+	
+}
+/*=========================================
+ 1. header > div, nav
+===========================================*/
+.header-top{
+	max-width: 1190px;
+	min-height: 200px;
+	margin: 0 auto;
+	position: relative;
+}
+.links{
+	float: left;
+}
+.links li a{
+	font-size: .7rem;
+	color: var(--primary-color, red);
+	font-weight: 500;
+	
+}
+.links li:nth-child(2), .icons li:nth-child(2){
+	margin:0 .5rem;
+}
+.links li a:hover{
+	color: var(--hover-color, red);
+}
+.links li, .icons li{
+	float: left;
+}
+.logo{
+	position: absolute;
+	left: 50%;
+	margin-left: -150px;
+	bottom: -7px;
+}
+.icons{
+	float: right;
+	margin: 70px 0 0 0;
+}
+.links, .icons{
+	margin-top: 4.5rem;
+}
+/*-----------------------------------------*/
+.header-bottom{
+	margin: 0 auto;
+	border-top: 2px solid #f9c02d;
+}
+.main-nav li{
+	float: left;
+}
+#gnb{
+	width: 600px;
+	margin: 0 auto;
+	overflow: hidden;
+}
+#gnb li{
+	float: left;
+	width: 150px;
+	text-align: center;
+	/*padding: .675rem 0;*/
+}
+#gnb li a{
+	display: block;
+	font-size: .9rem; /* 0.9rem x 20px =18px*/
+	color: var(--primary-color, red);
+	font-weight: 700;
+}
+#gnb li a:hover{
+	color: var(--hover-color, red);
+}
+/*=========================================
+ 2. div
+===========================================*/
+.video-wrap{
+	width: 920px;
+	height: 460px;
+	margin: 0 auto;
+	position: relative;
+}
+.characters{
+	position: absolute;
+	top: 140px;
+	left: 50%;
+	margin-left: calc(-378px / 2);
+}
+/*=========================================
+ 3. section > article
+===========================================*/
+.mt-100{
+	margin-top: 100px !important;
+}
+.mt-200{
+	margin-top: 200px !important;
+}
+.container{
+	max-width: 920px;
+	margin: 0 auto;
+}
+.container h3, .container h3 + p{
+	text-align: center;
+}
+.container h3 + p{
+	margin: .5rem 0;
+	font-size: .875rem;
+	/*color: var();*/
+}
+.container h3{
+	font-size: 1.5rem;
+	color: var(--primary-color, red);
+	text-transform: capitalize;
+	font-weight: 900;
+}
+.char-list::after{ /*clearFix*/
+	content: '';
+	display: block;
+	clear: both;
+	height: 0;
+}
+.char-list li{
+	float: left;
+	border: 1px solid #f9c02d;
+	box-sizing: border-box;
+	width: calc(100% / 3 - 1px);
+	overflow: hidden;
+}
+.container-fluid{
+	background-color: var(--primary-color);
+	position: relative;
+}
+.prev{
+	position: absolute;
+	left: 10%;
+	top: calc(50% - 20px);
+	color: var(--text-color);
+	border: 1px solid #ccc;
+	padding: 1rem;
+}
+.carousel{
+	max-width: 920px;
+	margin: 0 auto;
+	padding: 1rem 0;
+}
+.carousel div{
+	float: left;
+}
+.attach-img{
+	width: 30%;  /* 920px의 30% 해당하는 크기 */
+	margin-right: 2%;
+}
+.user-post{
+	width: calc(100% - 300px);
+	color: black;
+}
+.next{
+	position: absolute;
+	right: 10%;
+	top: calc(50% - 20px);
+	border: 1px solid #ccc;
+	/*border-radius: 50%;*/
+	padding: 1rem;
+	
+}
+.carousel::after{ /*clearFix*/
+	content: '';
+	display: block;
+	clear: both;
+	height: 0;
+}
+.goods-list{
+	overflow: hidden;
+}
+.goods-list li{
+	float: left;
+	width: calc(100% / 3);
+	text-align: center;
+	box-sizing: border-box;
+	border: 1px solid transparent;
+	padding: 1rem 0;
+}
+.goods-list li:hover{
+	border: 1px solid pink;
+}
+.user-post{
+	padding: 0 0 0 1rem;
+	box-sizing: border-box; /*content-box vs border-box*/
+}
+.post-author{
+	margin: 2rem 0 0 0;
+}
+.post-date{
+	margin: 1rem 0;
+	font-size: .8rem;
+}
+/*---events----*/
+.item{
+	/*font-size: 0;*/
+	height: 177px;
+	overflow: hidden; /*float 문제를 해결하려는 속성x, 부가적인 효과로 float 문제 해결*/
+}
+.item .item-first{		/*float를 자식에게만 주면 부모는 높이가 0가 된다.*/
+	float: left;
+}
+.item .item-last{
+	float: right;
+}
+.pager{
+	text-align: center;
+}
+.pager a{
+	border: 1px solid var(--primary-color, red);
+	display: inline-block; /*inline : 텍스트 -> 크기x ,글꼴-크기o*/
+	width: 15px;
+	height: 15px;
+	border-radius: 50%;
+	overflow: hidden;
+	font-size: 0;
+}
+.pager a:nth-child(1){
+	background-color:var(--primary-color, red);
+}
+.pager a:nth-child(2){
+	margin: 0 .5rem;
+}
+/*=========================================
+ 4. aside
+===========================================*/
+
+/*=========================================
+5. footer
+===========================================*/
+footer{
+	margin: 2rem 0;
+}
+footer .container{
+	position: relative;
+}
+.guide-links li{
+	display: inline-block;
+	font-size: .825rem;
+}
+.guide-links li:nth-child(2){
+	margin: 0 .5rem;
+}
+.logo-bottom{
+	position: absolute;
+	right: 0;
+	top: 1rem;
+}
+/*=========================================
+0. mobile
+===========================================*/
