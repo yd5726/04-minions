@@ -22,7 +22,6 @@ body{
 	color: var(--body-color, red);
 	line-height: 1.5;
 	letter-spacing: -1px;
-	overflow: hidden;			/*정적*/
 }
 .d-none{
 	display: none;
@@ -54,14 +53,14 @@ body{
 }
 .post-author .material-symbols-outlined{
 	vertical-align: middle;
-	background: var(--fourth-color);
+	background: var(--primary-color);
 	padding: .5rem;
 	border-radius: 1rem;
 	
 }
 .post-date .material-symbols-outlined{
 	vertical-align: middle;
-	background: var(--fourth-color);
+	background: var(--primary-color);
 	padding: .5rem;
 	border-radius: 1rem;
 	
@@ -69,42 +68,6 @@ body{
 /*=========================================
  1. header > div, nav
 ===========================================*/
-/*----pop up style start----*/
-#popup{
-	display: none;
-	position: fixed;
-	left: 0;
-	top: 0;
-	width: 100vw;	/*viewport width : vw*/
-	height: 100vh;  /*viewport height : vh*/
-	z-index: 9999;	/*포지셔닝 요소의 깊이값 : 1 ~ 9999*/
-}
-#popup.bg{
-	background-color: rgba(0,0,0,.3);	/*검정색, 30% 투명도*/
-}
-.contentP{
-	position: absolute;
-	width: 940px;
-	height: 568px;
-	left: 25%;
-	top: 25%;
-	margin-left: cacl(-940px / 2);
-	margin-top: cacl(-568px / 2);
-}
-#close{
-	position: absolute;
-	width: 80px;
-	height: 80px;
-	background: black;
-	color: white;
-	border-radius: 50%;
-	right: 2%;
-	top: 2%;
-	font-size: 3rem;
-	
-}
-/*----pop up style end----*/
-
 .header-top{
 	max-width: 1190px;
 	min-height: 200px;
@@ -228,7 +191,6 @@ body{
 .container-fluid{
 	background-color: var(--primary-color);
 	position: relative;
-	padding: 1rem 0;
 }
 .prev{
 	position: absolute;
@@ -240,30 +202,10 @@ body{
 }
 .carousel{
 	max-width: 920px;
-	height: 300px;
-	margin: 1rem auto;
-	padding: 0rem 0;
-	overflow: hidden;
+	margin: 0 auto;
+	padding: 1rem 0;
 }
 .carousel div{
-	float: left;
-}
-.article-links li.selected{
-	background-color: var(--primary-color);
-	color: var(--text-color);
-}
-/*============posts===============*/
-#posts{
-	height: 300px;
-	width: 300%;	/* 3 x 920 = 2760*/
-	transition: all ease-in-out .5s; /*스타일 속성 값의 변화 중간과정 속도 조절*/
-}
-/*========================================*/
-.post {
-	width: 920px;
-	height: 300px;
-}
-.post > div{
 	float: left;
 }
 .attach-img{
@@ -278,8 +220,8 @@ body{
 	position: absolute;
 	right: 10%;
 	top: calc(50% - 20px);
-	color: var(--text-color);
 	border: 1px solid #ccc;
+	/*border-radius: 50%;*/
 	padding: 1rem;
 	
 }
@@ -372,3 +314,61 @@ footer .container{
 /*=========================================
 0. mobile
 ===========================================*/
+
+/*about style*/
+.article-links{
+	margin: 0 0 2rem 0;
+	overflow: hidden;
+}
+
+.article-links li{
+	float: left;
+	width: calc(33.33333333% - 10px);
+	border: 1px solid var(--primary-color);
+	text-align: center;
+	padding: .5rem 0;
+	box-sizing: border-box;
+}
+.article-links li.selected{
+	background-color: var(--primary-color);
+	color: var(--text-color);
+}
+
+.article-links li .selected{
+	background-color: var(--primary-color);
+	color: var(--text-color);
+}
+/*about style : 시놉시스*/
+#synopsis{
+	overflow: hidden;
+}
+#synopsis .poster{
+	float: left;
+	width: 50%;
+}
+#synopsis .intro{
+	float: right;
+	width: 50%;
+}
+.intro-header{
+	margin: 2rem 0 0 0;
+}
+.intro-body{
+	margin: 1rem 0;
+}
+.chars td, .trailers td{
+	padding: .5rem;
+	text-align: center;
+	font-size: .875rem;
+	overflow: hidden;
+}
+.chars td img, .trailers td img{
+	/*max-width: 100%;*/ /*old*/
+	object-fit: cover;   /*new*/
+	width: 100%;         /*new*/
+}
+.chars td:hover img, .trailers td:hover img{
+	transform: scale(1.2);
+	width: 100%;
+	transition: all .3s;
+}

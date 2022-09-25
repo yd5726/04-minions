@@ -13,9 +13,16 @@
 		<!-- 폰트2 : 화살표 -->
 		<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
 		<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+		<!-- <script src="//code.jquery.com/jquery-latest.min.js"></script> -->
 	</head>
 	<body>
 		<h1 class="d-none">Minions: The Rise of Gru</h1>
+		<div id="popup" class="bg">
+			<div class="contentP">
+				<img src="images/big-event-cut.jpg" alt="미니언즈2 이벤트" />
+				<button type="button" id="close">&times;</button>
+			</div>
+		</div>
 		<header>
 			<h2 class="d-none">Minions: login+logo+icons</h2>
 			<div class="header-top">
@@ -37,8 +44,8 @@
 				<nav class="navbar main-nav">
 				<h3 class="d-none">Minions: nav</h3>
 					<ul id="gnb">
-						<li><a href="#">미니언즈2 소개</a></li>
-						<li><a href="#">캐릭터정보</a></li>
+						<li><a href="index.html">미니언즈2 소개</a></li>
+						<li><a href="about.html">캐릭터정보</a></li>
 						<li><a href="#">커뮤니티</a></li>
 						<li><a href="#">상영관</a></li>
 					</ul>
@@ -89,21 +96,55 @@
 						chevron_left
 					</span>
 				</div>
-					<div class="carousel">
-						<div class="attach-img">
-							<img src="images/attach.png" alt="첨부이미지">
+				<div class="carousel">
+					<div id ="posts">
+						<div class="post">
+							<div class="attach-img">
+								<img src="images/attach1.png" alt="첨부이미지">
+							</div>
+							<div class="user-post">
+								<p class="post-author">
+								<span class="material-symbols-outlined">person</span>
+								ha**ng13</p>
+								<p class="post-date">
+								<span class="material-symbols-outlined">calendar_month</span>
+								2022/09/14</p>
+								<p class="post-body">아이하고 보기 좋은 영화</p>
+								<p class="post-dtails">자세히 보기</p>
+							</div>
 						</div>
-						<div class="user-post">
-							<p class="post-author">
-							<span class="material-symbols-outlined">person</span>
-							ha**ng13</p>
-							<p class="post-date">
-							<span class="material-symbols-outlined">calendar_month</span>
-							2022/09/14</p>
-							<p class="post-body">아이하고 보기 좋은 영화</p>
-							<p class="post-dtails">자세히 보기</p>
+						<div class="post">
+							<div class="attach-img">
+								<img src="images/attach1.png" alt="첨부이미지">
+							</div>
+							<div class="user-post">
+								<p class="post-author">
+								<span class="material-symbols-outlined">person</span>
+								abc coco</p>
+								<p class="post-date">
+								<span class="material-symbols-outlined">calendar_month</span>
+								2022/09/14</p>
+								<p class="post-body">재미있습니다.</p>
+								<p class="post-dtails">자세히 보기</p>
+							</div>
+						</div>
+						<div class="post">
+							<div class="attach-img">
+								<img src="images/attach1.png" alt="첨부이미지">
+							</div>
+							<div class="user-post">
+								<p class="post-author">
+								<span class="material-symbols-outlined">person</span>
+								wolf</p>
+								<p class="post-date">
+								<span class="material-symbols-outlined">calendar_month</span>
+								2022/09/04</p>
+								<p class="post-body">귀엽습니다.</p>
+								<p class="post-dtails">자세히 보기</p>
+							</div>
 						</div>
 					</div>
+				</div>
 				<div class="next">
 					<span class="material-symbols-outlined">
 						chevron_right
@@ -195,4 +236,5 @@
 			</div>	
 		</footer><!-- footer end -->
 	</body>
+	<script src="script/main.js"></script>
 </html>
